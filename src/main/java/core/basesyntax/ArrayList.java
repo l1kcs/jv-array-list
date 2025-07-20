@@ -73,6 +73,7 @@ public class ArrayList<T> implements List<T> {
         T element = null;
         element = elements[index];
         System.arraycopy(elements, index + 1, elements, index, size - index - 1);
+        elements[index] = null;
         size--;
         return element;
     }
